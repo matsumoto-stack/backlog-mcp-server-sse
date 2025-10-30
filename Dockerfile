@@ -19,4 +19,4 @@ COPY --from=builder /app/package.json ./
 ARG VERSION
 ENV APP_VERSION=$VERSION
 
-CMD ["node", "build/index.js"]
+CMD ["node", "build/index.js", "--transport", "sse", "--port", "8080"]
